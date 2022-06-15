@@ -1,0 +1,33 @@
+=== hallway ===
+
+img: furniture-382154_640.jpg
+txt: I'm standing in the hallway. It connects to the bedroom, the kitchen, and the outside world.
+phone_ringing ? headache ? txt: The phone is ringing in the lounge, and I have a real bad headache.
+phone_ringing ? not headache ? txt: The phone is ringing in the lounge.
+headache ? not phone_ringing ? txt: I have a real bad headache.
+phoned_julie ? not found_phone ? not julie_accept ? txt: There's a faint beeping coming from the bedroom.
+
+opt: Open the front door.
+act: door
+
+opt: Go to the bedroom.
+act: bedroom
+
+opt: Go to the kitchen.
+act: kitchen
+
+use: Julie's phone
+act: examine_phone
+
+
+=== door ===
+
+img: door-1089638_640.jpg
+txt: I'm not going to leave home today. I don't feel up to it.
+
+act: hallway
+
+use: Julie's phone
+act: examine_phone
+
+

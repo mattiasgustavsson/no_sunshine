@@ -1,0 +1,20 @@
+=== messages ===
+
+message_service: You have no new messages.
+message_service: You have 1 saved message.
+
+say: Listen to the saved message.
+act: saved_message
+
+say: Hang up.
+act: phone
+
+
+=== saved_message ===
+
+act: set heard_message 
+julie: Hi baby, it's me. I just wanted to say that I love you so much. And take care, ok? Bye!
+player: She's such a sweetheart, I should call her and tell her how much I love her.
+act: phone
+
+

@@ -1,0 +1,51 @@
+=== talk_work ===
+
+act: set phoned_work
+act: set phoned_work_today
+
+work: A.W. Savings & Loans, assistant manager Frank Cavanaugh here, how can I help you?
+player: Hey Frank, it's me.
+work: Who's this?
+player: Come on Frank, I am not in the mood for games, not today.
+work: John? Is that you John? How have you been?
+
+say: You sound like you haven't seen me in a while.
+act: not_in_a_while
+
+say: I don't feel well today, so won't come in.
+act: not_come_in
+
+
+=== not_in_a_while ===
+
+work: Well, it's been a few months. I haven't seen you since the funeral.
+player: Funeral? What funeral.
+work: Sorry John, didn't mean to stir things up.
+
+say: I don't feel well today, so won't come in.
+act: not_come_in
+
+
+=== not_come_in ===
+
+work: Won't come in? John, you don't work here anymore. You haven't worked here for months.
+player: What are you talking about?
+work: Look, I know that losing Julie was very hard on you. Do you need someone to talk to? We could meet for lunch.
+player: Oh god. I lost Julie. I...
+act: set work_accept
+
+act: restart
+
+
+=== talk_work2 ===
+
+work: A.W. Savings & Loans, assistant manager Frank Cavanaugh here, how can I help you?
+player: Hey Frank, it's me.
+work: John. Are you feeling better today?
+
+say: What the hell is wrong with you Frank? Why would you say something like that?
+act: phone
+
+say: Julie is gone? I... what's happening Frank?
+act: talk_work_accept
+

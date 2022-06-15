@@ -1,0 +1,19 @@
+=== kitchen ===
+
+img: apartment-2094700_640.jpg
+txt: I am in the kitchen. There are no dishes in the sink. I guess Julie skipped breakfast, again.
+phone_ringing ? headache ? txt: The phone is ringing in the lounge, and I have a real bad headache.
+phone_ringing ? not headache ? txt: The phone is ringing in the lounge.
+headache ? not phone_ringing ? txt: I have a real bad headache.
+
+
+opt: Go to the hallway.
+act: hallway
+
+opt: Go to the lounge.
+act: lounge
+
+use: Julie's phone
+act: examine_phone
+
+

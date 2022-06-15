@@ -1,0 +1,70 @@
+=== bedroom ===
+
+img: bed-625386_150.jpg
+txt: I'm standing in the bedroom. The queen-size bed takes up most of the room, and some clothes are piled in a corner.
+phone_ringing ? headache ? txt: The phone is ringing in the lounge, and I have a real bad headache.
+phone_ringing ? not headache ? txt: The phone is ringing in the lounge.
+headache ? not phone_ringing ? txt: I have a real bad headache.
+phoned_julie ? not found_phone ? not julie_accept ? txt: There's a beeping sound coming from the closet.
+
+opt: Open the closet.
+act: closet
+
+opt: Go into the bathroom.
+act: bathroom
+
+opt: Go to the hallway.
+act: hallway
+
+use: Julie's phone
+act: examine_phone
+
+
+=== closet ===
+
+img: shirts-428618_640.jpg
+txt: The closet is full of clothes, mine and Julie's.
+phoned_julie ? not found_phone ? txt: There's a beeping sound coming from the clothes.
+phone_ringing ? headache ? txt: The phone is ringing in the lounge, and I have a real bad headache.
+phone_ringing ? not headache ? txt: The phone is ringing in the lounge.
+headache ? not phone_ringing ? txt: I have a real bad headache.
+
+phoned_julie ? not julie_accept ? not found_phone
+opt: Search the clothes.
+act: find_phone
+
+opt: Close the door.
+act: bedroom
+
+use: Julie's phone
+act: examine_phone
+
+
+=== find_phone ===
+
+act: set found_phone
+
+txt: The beeping is coming from a phone in a pair of Julie's jeans.
+act: get Julie's phone
+
+opt: Close the door.
+act: bedroom
+
+
+=== examine_phone ===
+
+act: set julie_accept
+act: drop Julie's phone
+
+img: phone-1523342_640.jpg
+txt: This is Julie's phone. What is it doing here? Why does she not have it with her? 
+
+act: examine_phone2
+
+
+=== examine_phone2 ===
+
+txt: I think... I'm starting to remember... I got it back after she... after she...
+txt: I... lost her?
+
+act: restart

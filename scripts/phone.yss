@@ -1,0 +1,38 @@
+=== phone ===
+
+img: phone-1662439_640.jpg
+txt: I don't really feel like talking to anyone. But sometimes you have to, I guess.
+
+not heard_message ?
+opt: Check messages.
+act: messages
+
+opt: Not right now though.
+act: lounge 
+
+not phoned_julie ? not julie_accept ? heard_message ?
+chr: julie
+act: talk_julie
+
+// chr: tom
+// act: talk_tom
+
+not phoned_work ? not phoned_work_today ? not work_accept ?
+chr: work
+act: talk_work
+
+phoned_work ? not phoned_work_today ? not work_accept ?
+chr: work
+act: talk_work2
+
+has_bottle ? not phoned_doctor ? not doctor_accept ?
+chr: doctor
+act: talk_doctor
+
+has_bottle ? phoned_doctor ? not doctor_accept ?
+chr: doctor
+act: talk_doctor2
+
+use: Julie's phone
+act: examine_phone
+

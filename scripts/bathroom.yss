@@ -1,0 +1,25 @@
+=== bathroom ===
+
+img: bathroom-231752_640.jpg
+txt: I am in the bathroom. The faucet is dripping - I should fix it, I've promised Julie.
+headache ? txt: I have a real bad headache.
+
+headache ? not has_bottle ?
+opt: Open the medicine cabinet.
+act: cabinet
+
+opt: Go back into the bedroom.
+act: bedroom
+
+use: Julie's phone
+act: examine_phone
+
+
+=== cabinet ===
+
+img: medicine-2520462_640.jpg
+txt: I don't seem to have any left of the strong pain killers. I need to talk to my doctor and get some more.
+
+act: set has_bottle
+act: get Pill bottle
+act: bathroom

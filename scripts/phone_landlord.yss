@@ -1,0 +1,32 @@
+=== talk_landlord ===
+
+act: clear phone_ringing
+
+player: Yeah hello, John speaking.
+landlord: Mr. Gordon? This is Steve Davies, I'm calling about your rent.
+player: Oh, Julie usually handles that. What is the problem?
+landlord: Hey, look, I know it's been rough, but you're three months behind now. 
+
+say: I don't believe you.
+act: not_believe
+
+say: Why would she do that without telling me?
+act: why_would
+
+
+=== why_would ===
+
+landlord: John, she is gone. You know she is gone, right?
+player: I... no...
+player: She is gone?
+
+act: set landlord_accept
+act: restart
+
+
+=== not_believe ===
+
+player: She would never forget like that. 
+landlord: Look, I'm not saying - 
+player: I'll talk to her when she gets home. 
+act: why_would

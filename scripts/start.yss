@@ -1,0 +1,178 @@
+title: No Sunshine
+author: Mattias Gustavsson
+start: intro
+palette: monkey2.png
+display_filters: pc
+logo: title.png
+background_dialog: dialogbg.png
+alone_text: 
+
+=== restart ===
+
+act: clear headache
+act: clear bed_cold
+act: clear phoned_work_today
+
+img: blank.png
+
+txt: I feel like I don't know what's going on anymore.
+
+not julie_accept ?  act: restart_not_done
+not work_accept ?  act: restart_not_done
+not doctor_accept ?  act: restart_not_done
+not landlord_accept ?  act: restart_not_done
+julie_accept ? work_accept ? doctor_accept ? landlord_accept ? act: done
+
+
+=== restart_not_done ===
+
+img: blank.png
+
+txt: The room is spinning. What the hell is going on? Is this just a bad dream? Everything is fading out.
+
+act: intro
+
+
+=== done ===
+
+img: guy-2617866_640.jpg
+txt: Though the realization have been building for a while, it feels like it is hitting me all at once. Julie is gone.
+
+act: done2
+
+
+=== done2 ===
+
+txt: I have been living in denial for a long time. But how can I face this? How can I move on.
+act: done3
+
+
+=== done3 ===
+
+img: picnic-1208229_640.jpg
+txt: With time, maybe I can start living again. I have friends who are there for me, and that helps.
+act: done4
+
+
+=== done4 ===
+
+txt: But even on days when the sun is out, I struggle to feel like there's any sunshine anymore.
+
+act: done5
+
+
+=== done5 ===
+
+img: blank.png
+txt: The end.
+
+act: end
+
+
+=== intro ===
+
+txt: It's raining today. I don't feel like going to work.
+act: intro2
+
+
+=== intro2 ===
+
+img: bed-linen-1149842_640.jpg
+not headache ? txt: I'm in bed. Head feels heavy. I feel drowsy, lethargic. 
+    headache ? txt: I'm in bed. I have a real bad headache.
+not bed_cold ? txt: It's still raining. The other side of the bed is cold. Julie must have left for work some time ago. The alarm is going off again. Louder this time.
+    bed_cold ? txt: It's still raining. The alarm is going off again. Louder this time.
+
+not landlord_accept ?
+opt: Turn off the alarm.
+act: alarm_off
+
+not doctor_accept ?
+opt: Go back to sleep.
+act: headache_alarm
+
+not julie_accept ? not work_accept ? headache ?
+opt: Get out of bed.
+act: bedroom
+
+not julie_accept ? not work_accept ? not headache ?
+opt: Get out of bed.
+act: bedroom
+
+julie_accept ? not work_accept ? not headache ?
+opt: Get out of bed.
+act: bedroom
+
+julie_accept ? not work_accept ? headache ?
+opt: Get out of bed.
+act: bedroom
+
+not julie_accept ? work_accept ? not headache ?
+opt: Get out of bed.
+act: bedroom
+
+not julie_accept ? work_accept ? headache ?
+opt: Get out of bed.
+act: bedroom
+
+julie_accept ? work_accept ? headache ?
+opt: Get out of bed.
+act: bedroom
+
+
+=== alarm_off ===
+
+act: clear headache
+img: bed-linen-1149842_640.jpg
+txt: I must have fallen asleep again. It's late in the afternoon, and I don't feel well. It's still raining. The phone is ringing in the lounge.
+headache ? txt: I have a real bad headache.
+act: set bed_cold
+act: set phone_ringing
+
+not doctor_accept ?
+opt: Go back to sleep.
+act: headache_phone
+
+opt: Get out of bed.
+act: bedroom
+
+
+=== alarm_off2 ===
+
+img: bed-linen-1149842_640.jpg
+txt: I'm in bed. It's late in the afternoon. It's still raining, and I'm still feeling terrible. The phone is ringing in the lounge.
+headache ? txt: I have a real bad headache.
+act: set bed_cold
+act: set phone_ringing
+
+not doctor_accept ?
+opt: Go back to sleep.
+act: headache_phone
+
+opt: Get out of bed.
+act: bedroom
+
+
+=== headache_alarm ===
+
+act: set bed_cold
+act: set headache
+txt: I can't go back to sleep. The ringing is giving me a bad headache.
+act: intro2
+
+
+=== headache_phone ===
+
+act: set headache
+txt: I can't go back to sleep. The ringing is giving me a bad headache.
+act: alarm_off2
+
+
+=== end ===
+
+img: yarnspin_logo.png
+txt: Thank you for playing "No Sunshine". The game was made for the Global Game Jam 2019, using my "Yarnspin" story-telling engine.
+txt:  
+txt: Find more of my games at mattiasgustavsson.com
+
+act: exit

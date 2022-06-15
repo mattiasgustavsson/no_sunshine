@@ -1,0 +1,51 @@
+=== talk_doctor ===
+
+act: set phoned_doctor
+doctor: Dr. Adler, how can I help you?
+player: Hi Doc, John Gordon here.
+doctor: Hello John, how are you feeling?
+
+say: Not very well today.
+act: not_well
+
+use: Pill bottle
+act: talk_pills
+
+
+=== talk_doctor2 ===
+
+doctor: Dr. Adler, how can I help you?
+player: Hi Doc, John Gordon again.
+doctor: Hello John. Did you remember what you wanted to talk about?
+
+say: No, I guess I still dont' know. Bye.
+act: phone
+
+use: Pill bottle
+act: talk_pills
+
+
+=== not_well ===
+
+player: I think I'm coming down with a cold or something.
+doctor: Is that really why you're calling?
+
+say: No, I guess I don't know why I'm calling. Bye.
+act: phone
+ 
+use: Pill bottle
+act: talk_pills
+
+=== talk_pills ===
+
+act: drop Pill bottle
+act: set doctor_accept
+player: I've run out of those pain killers, going to need a refill.
+doctor: Pain killers? I never prescribed you any of those.
+player: But I've got the bottle right here!
+doctor: John. Those were Julie's. To give her some relief towards the end.
+player: The end? The end of what?
+doctor: Oh John, I'm so sorry. Why don't you come in for a talk? There's no shame in needing help to deal with loss.
+player: God, I lost her? I lost her didn't I?
+
+act: restart
