@@ -1,3 +1,3 @@
-![yarnspin](images/yarnspin_logo.png)
+![yarnspin](images/title.png)
 
 A game made in the Yarnspin story-telling engine.
