@@ -67,4 +67,4 @@ act: examine_phone2
 txt: I think... I'm starting to remember... I got it back after she... after she...
 txt: I... lost her?
 
-act: restart
+act: restart_day

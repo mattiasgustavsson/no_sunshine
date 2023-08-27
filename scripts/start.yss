@@ -1,13 +1,21 @@
 title: No Sunshine
+version: 1.0
 author: Mattias Gustavsson
-start: intro
+start: logo
 palette: monkey2.png
-display_filters: pc
-logo: title.png
+display_filters: pc, none
 background_dialog: dialogbg.png
+resolution: retro
 alone_text: 
+nothing_text:
 
-=== restart ===
+=== logo ===
+
+scr: title.png
+act: intro
+
+
+=== restart_day ===
 
 act: clear headache
 act: clear bed_cold
@@ -71,6 +79,7 @@ act: end
 
 === intro ===
 
+img: blank.png
 txt: It's raining today. I don't feel like going to work.
 act: intro2
 

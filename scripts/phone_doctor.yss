@@ -48,4 +48,4 @@ player: The end? The end of what?
 doctor: Oh John, I'm so sorry. Why don't you come in for a talk? There's no shame in needing help to deal with loss.
 player: God, I lost her? I lost her didn't I?
 
-act: restart
+act: restart_day

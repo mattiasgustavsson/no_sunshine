@@ -21,7 +21,7 @@ player: I... no...
 player: She is gone?
 
 act: set landlord_accept
-act: restart
+act: restart_day
 
 
 === not_believe ===

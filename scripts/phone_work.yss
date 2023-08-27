@@ -34,7 +34,7 @@ work: Look, I know that losing Julie was very hard on you. Do you need someone t
 player: Oh god. I lost Julie. I...
 act: set work_accept
 
-act: restart
+act: restart_day
 
 
 === talk_work2 ===
